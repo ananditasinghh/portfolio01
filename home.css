@@ -2,13 +2,13 @@
         /* CSS for the loading animation */
         body {
             overflow: hidden;
-            background-color: #000;
+            background-color: rgb(25, 2, 40);
             color: #fff;
             margin: 0;
         }
 
         #loading {
-            background: #000;
+            background: rgb(25, 2, 40);
             position: fixed;
             top: 50%;
             left: 50%;
@@ -49,10 +49,11 @@
             font-weight: bold; /* Make the text bold */
             display: inline-block;
             font-family:'Courier New', Courier, monospace;
+            
 
-            border: 2px solid #000000;
+            border: 2px solid rgb(25, 2, 40);
             padding: 5px;
-            background-color: #000;
+            background-color: rgb(25, 2, 40);
             animation: fadeIn 2s ease-in-out; /* Adjust the animation duration */
         }
 
@@ -61,9 +62,9 @@
             font-weight: bold;
             font-family:'Courier New', Courier, monospace;
             display: inline-block;
-            border: 2px solid #000000;
+            border: 2px solid rgb(25, 2, 40);
             padding: 5px;
-            background-color: #000;
+            background-color: rgb(25, 2, 40);
             animation: fadeInOut 1s linear infinite;
         }
 
@@ -89,7 +90,7 @@
         top: 80px;
         
         width: 100%; /* Adjust the width as needed */
-        background-color: rgb(0, 0, 0); /* Change the background color */
+        background-color: rgb(25, 2, 40); /* Change the background color */
         padding: 10px;
         text-align: center;
         font-family:'Courier New', Courier, monospace;
@@ -114,7 +115,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #000000; /* Change the background color to your preference */
+            background-color: rgb(25, 2, 40); /* Change the background color to your preference */
             padding: 10px;
             text-align: right;
             z-index: 1000;
@@ -132,6 +133,9 @@
             height: 60px;
         }
 
+
+        
+    </style>
 
         
     </style>
