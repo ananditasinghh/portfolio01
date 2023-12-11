@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(25, 2, 40);
+            color: #fff;
+        }
+
+        #navbar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            background-color: rgb(25, 2, 40);
+            color: #fff;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #navbar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            border-bottom: 2px solid #555;
+            transition: background-color 0.3s;
+            font-family:sans-serif;
+        }
+
+        #navbar a:hover {
+            background-color: #9565c0;
+        }
+
+        #nav-toggle {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            cursor: pointer;
+            z-index: 2;
+            font-size: 25px;
+            font-family:sans-serif;
+        }
+
+        .container {
+            display: flex;
+            color: #fff;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items at the top */
+            max-width: 1230px;
+            
+            margin: 55px auto;
+            padding: 20px;
+            background-color: rgb(25, 2, 40);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(95, 25, 142);
+            margin-left: 20; /* Adjusted margin to accommodate the navbar width */
+        }
+
+        .content {
+            width: 60%; /* Adjusted content width */
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .content h2 {
+            color: #fff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .content p {
+            line-height: 1.6;
+            color: #fff;
+            text-align: justify;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        .photo {
+            width: 30%; /* Adjusted photo width */
+            text-align: right;
+            position: relative;
+            right: 50px;
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            padding: 2px;
+            box-shadow: 0 0 10px rgb(95, 25, 142);
+            border-radius: 40%;
+            margin-top: 200px;
+            
+        }
+
+        .photo:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 100%;
+            background: radial-gradient(circle at center, #807d7d 0%, #000 100%);
+            opacity: 0.5;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            font-size: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+    </style>
+    <title>About Me</title>
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="/Users/ananditasingh/Desktop/ogwebsite/projects.html">Projects</a>
+        <a href="/Users/ananditasingh/Desktop/ogwebsite/hireme.html">Hire Me</a>
+    </div>
+
+    <div id="nav-toggle">&#8286;</div>
+
+    <div class="container">
+        <div class="content">
+            <h2> <b> About me </b></h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                 Nec ultrices dui sapien eget mi proin sed. Quis risus sed vulputate 
+                 odio ut enim blandit volutpat. Donec et odio pellentesque diam volutpat
+                  commodo sed. Sit amet nulla facilisi morbi tempus iaculis. Enim blandit
+                   volutpat maecenas volutpat. Adipiscing bibendum est ultricies integer
+                    quis auctor elit sed vulputate. Senectus et netus et malesuada. Vitae 
+                    justo eget magna fermentum. Vehicula ipsum a arcu cursus. Pellentesque
+                     diam volutpat commodo sed egestas egestas fringilla. Bibendum arcu vitae 
+                     elementum curabitur. A scelerisque purus semper eget duis at. Odio aenean
+                      sed adipiscing diam donec. Quis varius quam quisque id diam. Gravida dictum 
+                      fusce ut placerat orci nulla pellentesque dignissim enim.
+                    </p>
+                    <p>
+Sagittis nisl rhoncus mattis rhoncus urna neque viverra.
+ Orci porta non pulvinar neque laoreet suspendisse interdum 
+ consectetur. Gravida in fermentum et sollicitudin ac orci phasellus.
+ ' Ornare quam viverra orci sagittis eu volutpat odio facilisis mauris.
+  Vel eros donec ac odio tempor orci dapibus ultrices. In ante metus dictum
+   at tempor commodo. Libero justo laoreet sit amet cursus sit amet dictum.
+    Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Neque sodales ut 
+    etiam sit amet nisl purus in mollis. Vivamus at augue eget arcu dictum varius.
+</p>
+
+<p>
+Risus feugiat in ante metus. Phasellus egestas tellus rutrum tellus pellentesque eu 
+tincidunt tortor. Ultricies mi quis hendrerit dolor magna eget est lorem. Cursus turpis
+ massa tincidunt dui ut ornare lectus sit. In mollis nunc sed id. Quis auctor elit sed 
+ vulputate mi sit. Sit amet luctus venenatis lectus magna fringilla urna. Consectetur lorem
+  donec massa sapien faucibus et molestie ac. Nulla pellentesque dignissim enim sit. Ornare
+   suspendisse sed nisi lacus sed viverra. Egestas quis ipsum suspendisse ultrices gravida dictum.
+</p>
+
+
+
+        </div>
+        <div class="photo">
+            <img src="/Users/ananditasingh/Desktop/ogwebsite/AvatarMaker (2).png" alt="Your Photo">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/anandita-singh-b01535223/" target="https://www.linkedin.com/in/anandita-singh-b01535223/">&#128100;</a>
+                <a href="https://mail.google.com/mail/u/?authuser=anandita.singh.ug21@nsut.ac.in" target="https://mail.google.com/mail/u/?authuser=anandita.singh.ug21@nsut.ac.in">&#128172;</a>
+                <a href="https://github.com/ananditasinghh" target="https://github.com/ananditasinghh">&#128187;</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.style.width === '200px') {
+                navbar.style.width = '0';
+            } else {
+                navbar.style.width = '200px';
+            }
+        });
+    </script>
+
+</body>
+</html>
