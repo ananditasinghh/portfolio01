@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family:'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(25, 2, 40);
+            color: #ffffff;
+            
+            
+        }
+
+        #navbar {
+            position: fixed;
+            font-style:oblique;
+            left: 0;
+            top: 0;
+            height: 200%;
+            width: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            background-color: rgb(25, 2, 40);
+            color: #fff;
+            padding-top: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        #navbar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            border-bottom: 2px solid #555;
+            transition: background-color 0.3s;
+            font-family:sans-serif;
+        }
+
+        #navbar a:hover {
+            background-color: #9565c0;
+            
+        }
+
+        #navbar-toggle {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            cursor: pointer;
+            z-index: 2;
+            font-size: 30px;
+            line-height: normal;
+            font-family:sans-serif;
+        }
+
+        header {
+            background-color: rgb(25, 2, 40);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 850px;
+            max-height: 20px;
+            margin: 15px auto;
+            padding: 20px;
+            background-color: rgb(25, 2, 40);
+            
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #000000;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 50px;
+            margin-bottom: 90px;
+            font-size: 1.5em;
+        }
+
+        .project {
+            margin-bottom: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(178, 162, 211, 0.2);
+            border: px solid rgb(25, 2, 40);
+            background-color: rgb(25, 2, 40);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(95, 25, 142);
+            transition: transform 0.3s ease-in-out;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .project:nth-child(odd) {
+            clear: both;
+            margin-right: 20;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            color: #f7f5f5;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .project h3 a:link,
+        .project h3 a:visited {
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .project p {
+            color: #f5f2f2;
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .technologies {
+            font-size: 0.8em;
+            color: #ede9e9;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="/Users/ananditasingh/Desktop/ogwebsite/aboutme.html">About Me</a>
+        <a href="/Users/ananditasingh/Desktop/ogwebsite/hireme.html">Hire Me</a>
+    </div>
+
+    <div id="navbar-toggle">&#8286;</div>
+
+    <header>
+        <h1 style="font-size: 2em;">My Projects</h1>
+    </header>
+
+    <section>
+        <div class="project">
+            <h3><a href="https://github.com/ananditasinghh/AquaCue">AQUA CUE</a></h3>
+            <img src="/Users/ananditasingh/Desktop/Screenshot 2023-12-10 at 2.11.03 AM.png" alt="Project 1 Image">
+            <p>Plantcare management system, that is designed for timely watering 
+                reminders and plant health guidance. It also emphasizes on streamlined watering routines
+                 for optimal plant growth</p><br><br>
+            <p class="technologies"><b>Tools & Technologies: C++, Javascript, HTML, and CSS.</b></p>
+        </div>
+
+        <div class="project">
+            <h3><a href="https://github.com/ananditasinghh/kristoff_frosty_ride">
+           Frosty Ride </a></h3>
+            <img src="/Users/ananditasingh/Desktop/My project/Screenshot 2023-06-29 at 8.41.16 PM.png" alt="Project 2 Image">
+            <p>A snowboarding game. That takes players on a thrilling journey through snowy cliffs and fields. 
+                The game Design is : Player experience -> Smooth and relaxing Core Mechanic -> Don't Crash Game loop
+                 -> Reach the end to win</p>
+            <p class="technologies"><b>Tools & Technologies: Unity Hub 2021, C# </b></p>
+        </div>
+
+        <div class="project">
+            <h3><a href="https://github.com/ananditasinghh/Blooming-Algorithms/blob/main/code.cpp">Blooming Algorithms</a></h3>
+            <img src="/Users/ananditasingh/Desktop/Screenshot 2023-12-10 at 4.36.15 PM.png" alt="Project 3 Image">
+            <p> This focuses on garden layout optimization. And manages companion plant relationships, 
+                enhancing garden design precision.</p><br><br><br>
+            
+            <p class="technologies"><b>Tools & Technologies: C++ based on Dynamic Programming Concept</b></p>
+        </div>
+
+        <div class="project">
+            <h3><a href="https://github.com/ananditasinghh/CodeRepositoryProject">Code Repository Project</a></h3>
+            <img src="/Users/ananditasingh/Desktop/Screenshot 2023-12-10 at 4.48.08 PM.png" alt="Project 4 Image">
+            <p>CodeRepository project is for storing, retrieving, and managing code snippets. It 
+                engineers efficient solution for coding problem logic retention.
+            </p>
+            <p class="technologies"><b>Tools & Technologies: C++ based on Binary Tree Concept</b></p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.style.width === '200px') {
+                navbar.style.width = '0';
+            } else {
+                navbar.style.width = '200px';
+            }
+        });
+    </script>
+
+</body>
+</html>
