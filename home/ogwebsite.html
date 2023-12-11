@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for the loading animation */
+        body {
+            overflow: hidden;
+            background-color: rgb(25, 2, 40);
+            color: #fff;
+            margin: 0;
+        }
+
+        #loading {
+            background: rgb(25, 2, 40);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px; /* Adjust the width of the loading animation */
+            height: 100px; /* Adjust the height of the loading animation */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 3em; /* Adjust the font size to increase the size */
+            font-weight: bold; /* Make the text bold */
+            z-index: 9999;
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        #loading.hidden {
+            opacity: 0;
+            transform: scale(10); /* Adjust the scale factor to control the enlargement */
+            pointer-events: none;
+        }
+
+        /* Add any additional loading animation styles here */
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: none;
+        }
+
+        .text {
+            font-size: 3em; /* Adjust the font size for "HELLO, I AM" */
+            font-weight: bold; /* Make the text bold */
+            display: inline-block;
+            font-family:'Courier New', Courier, monospace;
+            
+
+            border: 2px solid rgb(25, 2, 40);
+            padding: 5px;
+            background-color: rgb(25, 2, 40);
+            animation: fadeIn 2s ease-in-out; /* Adjust the animation duration */
+        }
+
+        .highlighted {
+            font-size: 3.5em; /* Adjust the font size for the highlighted words */
+            font-weight: bold;
+            font-family:'Courier New', Courier, monospace;
+            display: inline-block;
+            border: 2px solid rgb(25, 2, 40);
+            padding: 5px;
+            background-color: rgb(25, 2, 40);
+            animation: fadeInOut 1s linear infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        .navbar {
+        position: fixed;
+        top: 80px;
+        
+        width: 100%; /* Adjust the width as needed */
+        background-color: rgb(25, 2, 40); /* Change the background color */
+        padding: 10px;
+        text-align: center;
+        font-family:'Courier New', Courier, monospace;
+        z-index: 1000;
+        font-weight: bold;
+        
+    }
+
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 1.2em;
+    }
+
+    .navbar a:hover {
+        border-bottom: 2px solid #fff;
+    }
+
+    .social-icons {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(25, 2, 40); /* Change the background color to your preference */
+            padding: 10px;
+            text-align: right;
+            z-index: 1000;
+            display: flex;
+            justify-content: right;
+            align-items: rightr;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+        }
+
+        .social-icons img {
+            width: 60px; /* Adjust the size of the social icons */
+            height: 60px;
+        }
+
+
+        
+    </style>
+    <title>Anandita Singh - Portfolio</title>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading">
+        A
+    </div>
+
+    <div class="container">
+        <div class="text">HELLO!  I AM</div>
+        <div class="text" id="dynamicText">
+        </div>
+    </div>
+
+
+    <div class="navbar" id="navbar" background-color="purple">
+        <a href="/Users/ananditasingh/Desktop/ogwebsite/aboutme.html">ANANDITA</a>
+        <a href="file:///Users/ananditasingh/Desktop/ogwebsite/projects.html">PROJECTS</a>
+        <a href="file:///Users/ananditasingh/Desktop/ogwebsite/hireme.html">HIRE ME</a>
+    </div>
+
+
+    <div class="social-icons">
+        <a href="your_linkedin_url" target="_blank"><img src="/Users/ananditasingh/Desktop/ogwebsite/Screenshot 2023-12-08 at 10.26.04 PM.png"
+             alt="LinkedIn"></a>
+        <a href="your_twitter_url" target="_blank"><img src="/Users/ananditasingh/Desktop/ogwebsite/Screenshot 2023-12-08 at 10.04.41 PM.png" alt="GMAIL"></a>
+        <a href="your_github_url" target="_blank"><img src="/Users/ananditasingh/Desktop/ogwebsite/Screenshot 2023-12-08 at 10.16.18 PM.png" alt="GitHub"></a>
+        
+    
+    </div>
+
+
+    <script>
+
+
+
+        // JavaScript to trigger the loading animation and reveal the portfolio content
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                const loading = document.getElementById("loading");
+                loading.classList.add("hidden");
+                document.body.style.overflow = "visible";
+
+                // Start dynamic text animation after loading
+                const container = document.querySelector(".container");
+                container.style.display = "block";
+
+                const words = [ "ANANDITA", " A STUDENT", "A WEB DEVELOPER", "A GAME ENTHUSIAST", "A SRK FAN"];
+                const dynamicText = document.getElementById('dynamicText');
+                let wordIndex = 0;
+                let paused = false;
+
+                function changeWord() {
+                    if (!paused) {
+                        dynamicText.textContent = words[wordIndex];
+                        if (wordIndex === 100 || wordIndex === 500) {
+                            dynamicText.classList.add('highlighted');
+                        } else {
+                            dynamicText.classList.remove('highlighted');
+                        }
+                        wordIndex = (wordIndex + 1) % words.length;
+                    }
+                }
+
+                setInterval(changeWord, 1500); // Change the word every 1.5 seconds
+
+                setTimeout(() => {
+                    paused = true;
+                    setTimeout(() => {
+                        paused = false;
+                    }, 500); // Pause for 5 seconds
+                }, 500); // Pause after 5 seconds
+
+                // Show the navigation bar after 10 seconds
+                setTimeout(() => {
+                    const navbar = document.getElementById("navbar");
+                    navbar.style.display = "block";
+                }, 10000);
+            }, 2000); // Adjust the time (in milliseconds) for the loading animation
+        });
+    </script>
+</body>
+</html>
